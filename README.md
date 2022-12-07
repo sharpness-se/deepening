@@ -25,7 +25,7 @@
 
 Kolla på YouTube:
 
-* [Angular Tutoria for Beginners](https://youtu.be/htPYk6QxacQ)
+* [Angular Tutorial for Beginners](https://youtu.be/htPYk6QxacQ)
 * [Real Beginners Corner: HTML, CSS & JavaScript Basics](https://youtube.com/playlist?list=PL55RiY5tL51oJMqB1syVpXmQySoJsduFl)
 
 Referensmaterial:
