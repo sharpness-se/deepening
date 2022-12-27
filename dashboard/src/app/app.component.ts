@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ChartOptions, ChartData } from 'chart.js';
+import { ChartData } from 'chart.js';
+import { GameUsageService } from './game-usage.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,9 @@ import { ChartOptions, ChartData } from 'chart.js';
 })
 export class AppComponent {
   title = 'dashboard';
-  
+  gameChartData: ChartData<'line', {key: string, value:number}[]>;
+
+  constructor(private readonly gameUsageService: GameUsageService){
+    this.gameChartData = this.gameUsageService.getGameUsage();
+  }
 }
