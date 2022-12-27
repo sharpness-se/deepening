@@ -1,5 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ChartData } from 'chart.js';
+export interface GameUsage {
+  game: string;
+  year: number;
+  month: number;
+  date: string;
+  activeUsers: number;
+}
 
 @Injectable({
   providedIn: 'root'
