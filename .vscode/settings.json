@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.launcherClient": "visualStudioCode"
+}
