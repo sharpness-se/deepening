@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 import { ChartData } from 'chart.js';
-import { GameUsageService } from './game-usage.service';
+import { GameUsage, GameUsageService } from './game-usage.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'dashboard';
-  gameChartData: ChartData<'line', {key: string, value:number}[]>;
+  gameUsagesArrays: GameUsage[][];
 
-  constructor(private readonly gameUsageService: GameUsageService){
-    this.gameChartData = this.gameUsageService.getGameUsage();
+  constructor(private readonly gameUsageService: GameUsageService) {
+    const lol = this.gameUsageService.getGameUsage('League of Legends');
+    const mine = this.gameUsageService.getGameUsage('Minecraft');
+
+    const combine = [lol, mine];
+    this.gameUsagesArrays = combine;
   }
 }
